@@ -4,7 +4,8 @@ import 'package:expence_tracker/expenses_list/widgets/expenses.dart';
 
 void main() {
   runApp(
-    const MaterialApp(
+    MaterialApp(
+      theme: ThemeData(useMaterial3: true),
       home: Expenses(),
     ),
   );
