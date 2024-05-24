@@ -14,6 +14,8 @@ class ExpenseList extends StatelessWidget {
         itemCount: expenses.length,
         itemBuilder: (context, index) =>
             Dismissible(             // gets swiping effect to remove the ojcect.
+            background: Container(color: Theme.of(context).colorScheme.error.withOpacity(0.75),
+            margin:EdgeInsets.symmetric(horizontal: Theme.of(context).cardTheme.margin!.horizontal)),
             key: ValueKey(expenses[index]),
             onDismissed:(direction){
               onRemoveExpense(expenses[index]);
